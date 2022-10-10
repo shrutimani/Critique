@@ -1,0 +1,531 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "An interactive scatter plot of the number of dropouts for primary and secondary students over the years.",
+  "background": "#fff",
+  "padding": 5,
+  "width": 500,
+  "height": 300,
+  "style": "cell",
+  "data": [
+    {
+      "name": "year_store",
+      "values": [
+        {
+          "unit": "layer_1_layer_1",
+          "fields": [{"type": "E", "field": "year"}],
+          "values": [2013]
+        }
+      ]
+    },
+    {"name": "hovered_store"},
+    {"name": "clicked_store"},
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/shrutimani/week-10-homework/main/total_final.json",
+      "format": {"type": "json", "parse": {"States": "string"}}
+    },
+    {
+      "name": "source_1",
+      "values": [
+        {"id": 0, "name": "A & N Islands"},
+        {"id": 1, "name": "Andhra Pradesh"},
+        {"id": 2, "name": "Arunachal  Pradesh"},
+        {"id": 3, "name": "Assam"},
+        {"id": 4, "name": "Bihar"},
+        {"id": 5, "name": "Chhattisgarh"},
+        {"id": 6, "name": "Dadra & Nagar Haveli"},
+        {"id": 7, "name": "Daman & Diu"},
+        {"id": 8, "name": "Goa"},
+        {"id": 9, "name": "Gujarat"},
+        {"id": 10, "name": "Haryana"},
+        {"id": 11, "name": "Himachal Pradesh"},
+        {"id": 12, "name": "Jammu & Kashmir"},
+        {"id": 13, "name": "Jharkhand"},
+        {"id": 14, "name": "Karnataka"},
+        {"id": 15, "name": "Lakshadweep"},
+        {"id": 16, "name": "Madhya  Pradesh"},
+        {"id": 17, "name": "Maharashtra"},
+        {"id": 18, "name": "Manipur"},
+        {"id": 19, "name": "Meghalaya"},
+        {"id": 20, "name": "Mizoram"},
+        {"id": 21, "name": "Nagaland"},
+        {"id": 22, "name": "Odisha"},
+        {"id": 23, "name": "Puducherry"},
+        {"id": 24, "name": "Punjab"},
+        {"id": 25, "name": "Rajasthan"},
+        {"id": 26, "name": "Sikkim"},
+        {"id": 27, "name": "Tamil  Nadu"},
+        {"id": 28, "name": "Telangana"},
+        {"id": 29, "name": "Tripura"},
+        {"id": 30, "name": "Uttar Pradesh"},
+        {"id": 31, "name": "Uttarakhand"},
+        {"id": 32, "name": "West Bengal"},
+        {"id": 33, "name": "All India"}
+      ]
+    },
+    {
+      "name": "data_0",
+      "source": "source_0",
+      "transform": [
+        {"type": "filter", "expr": "datum[\"States\"]===\"A & N Islands\""},
+        {
+          "type": "filter",
+          "expr": "!length(data(\"year_store\")) || vlSelectionTest(\"year_store\", datum)"
+        }
+      ]
+    },
+    {
+      "name": "data_1",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "source_1",
+          "key": "id",
+          "fields": ["States"],
+          "values": ["name"]
+        }
+      ]
+    },
+    {
+      "name": "data_2",
+      "source": "data_1",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "!length(data(\"year_store\")) || vlSelectionTest(\"year_store\", datum)"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Primary\"]) && isFinite(+datum[\"Primary\"]) && isValid(datum[\"Secondary\"]) && isFinite(+datum[\"Secondary\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_3",
+      "source": "data_1",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "(!length(data(\"year_store\")) || vlSelectionTest(\"year_store\", datum)) && ((length(data(\"clicked_store\")) && vlSelectionTest(\"clicked_store\", datum)) || (length(data(\"hovered_store\")) && vlSelectionTest(\"hovered_store\", datum)))"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Primary\"]) && isFinite(+datum[\"Primary\"]) && isValid(datum[\"Secondary\"]) && isFinite(+datum[\"Secondary\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_4",
+      "source": "data_1",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "length(data(\"hovered_store\")) && vlSelectionTest(\"hovered_store\", datum)"
+        },
+        {
+          "type": "filter",
+          "expr": "!(!length(data(\"year_store\")) || vlSelectionTest(\"year_store\", datum))"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Primary\"]) && isFinite(+datum[\"Primary\"]) && isValid(datum[\"Secondary\"]) && isFinite(+datum[\"Secondary\"])"
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "unit",
+      "value": {},
+      "on": [
+        {"events": "mousemove", "update": "isTuple(group()) ? group() : unit"}
+      ]
+    },
+    {
+      "name": "year_year",
+      "init": "2013",
+      "bind": {
+        "name": "Year",
+        "input": "range",
+        "min": 2013,
+        "max": 2015,
+        "step": 1
+      }
+    },
+    {
+      "name": "year",
+      "update": "vlSelectionResolve(\"year_store\", \"union\", true, true)"
+    },
+    {
+      "name": "hovered",
+      "update": "vlSelectionResolve(\"hovered_store\", \"union\", true, true)"
+    },
+    {
+      "name": "clicked",
+      "update": "vlSelectionResolve(\"clicked_store\", \"union\", true, true)"
+    },
+    {
+      "name": "year_tuple",
+      "update": "year_year !== null ? {fields: year_tuple_fields, values: [year_year]} : null"
+    },
+    {"name": "year_tuple_fields", "value": [{"type": "E", "field": "year"}]},
+    {
+      "name": "year_modify",
+      "on": [
+        {
+          "events": {"signal": "year_tuple"},
+          "update": "modify(\"year_store\", year_tuple, true)"
+        }
+      ]
+    },
+    {
+      "name": "hovered_tuple",
+      "on": [
+        {
+          "events": [{"source": "scope", "type": "mouseover"}],
+          "update": "datum && item().mark.marktype !== 'group' ? {unit: \"layer_1_layer_1\", fields: hovered_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"States\"]]} : null",
+          "force": true
+        },
+        {"events": [{"source": "view", "type": "dblclick"}], "update": "null"}
+      ]
+    },
+    {
+      "name": "hovered_tuple_fields",
+      "value": [{"type": "E", "field": "States"}]
+    },
+    {
+      "name": "hovered_modify",
+      "on": [
+        {
+          "events": {"signal": "hovered_tuple"},
+          "update": "modify(\"hovered_store\", hovered_tuple, true)"
+        }
+      ]
+    },
+    {
+      "name": "clicked_tuple",
+      "on": [
+        {
+          "events": [{"source": "scope", "type": "click"}],
+          "update": "datum && item().mark.marktype !== 'group' ? {unit: \"layer_1_layer_1\", fields: clicked_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"States\"]]} : null",
+          "force": true
+        },
+        {"events": [{"source": "view", "type": "dblclick"}], "update": "null"}
+      ]
+    },
+    {
+      "name": "clicked_tuple_fields",
+      "value": [{"type": "E", "field": "States"}]
+    },
+    {
+      "name": "clicked_toggle",
+      "value": false,
+      "on": [
+        {
+          "events": [{"source": "scope", "type": "click"}],
+          "update": "event.shiftKey"
+        },
+        {"events": [{"source": "view", "type": "dblclick"}], "update": "false"}
+      ]
+    },
+    {
+      "name": "clicked_modify",
+      "on": [
+        {
+          "events": {"signal": "clicked_tuple"},
+          "update": "modify(\"clicked_store\", clicked_toggle ? null : clicked_tuple, clicked_toggle ? null : true, clicked_toggle ? clicked_tuple : null)"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "layer_0_marks",
+      "type": "text",
+      "style": ["text"],
+      "interactive": false,
+      "from": {"data": "data_0"},
+      "encode": {
+        "update": {
+          "opacity": {"value": 0.06},
+          "fontSize": {"value": 100},
+          "fill": {"value": "black"},
+          "description": {
+            "signal": "\"year: \" + (isValid(datum[\"year\"]) ? datum[\"year\"] : \"\"+datum[\"year\"])"
+          },
+          "x": {"signal": "width", "mult": 0.5},
+          "y": {"signal": "height", "mult": 0.5},
+          "text": {
+            "signal": "isValid(datum[\"year\"]) ? datum[\"year\"] : \"\"+datum[\"year\"]"
+          },
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"}
+        }
+      }
+    },
+    {
+      "name": "layer_1_layer_0_pathgroup",
+      "type": "group",
+      "from": {
+        "facet": {
+          "name": "faceted_path_layer_1_layer_0_main",
+          "data": "data_1",
+          "groupby": ["States"]
+        }
+      },
+      "encode": {
+        "update": {
+          "width": {"field": {"group": "width"}},
+          "height": {"field": {"group": "height"}}
+        }
+      },
+      "marks": [
+        {
+          "name": "layer_1_layer_0_marks",
+          "type": "line",
+          "style": ["line"],
+          "sort": {"field": ["datum[\"year\"]"], "order": ["ascending"]},
+          "interactive": false,
+          "from": {"data": "faceted_path_layer_1_layer_0_main"},
+          "encode": {
+            "update": {
+              "strokeCap": {"value": "round"},
+              "stroke": {"value": "black"},
+              "opacity": [
+                {
+                  "test": "(length(data(\"hovered_store\")) && vlSelectionTest(\"hovered_store\", datum)) || (length(data(\"clicked_store\")) && vlSelectionTest(\"clicked_store\", datum))",
+                  "value": 1
+                },
+                {"value": 0}
+              ],
+              "description": {
+                "signal": "\"Primary: \" + (format(datum[\"Primary\"], \"\")) + \"; Secondary: \" + (format(datum[\"Secondary\"], \"\")) + \"; year: \" + (isValid(datum[\"year\"]) ? datum[\"year\"] : \"\"+datum[\"year\"]) + \"; States: \" + (isValid(datum[\"States\"]) ? datum[\"States\"] : \"\"+datum[\"States\"])"
+              },
+              "x": {"scale": "x", "field": "Primary"},
+              "y": {"scale": "y", "field": "Secondary"},
+              "strokeWidth": {"value": 4},
+              "defined": {
+                "signal": "isValid(datum[\"Primary\"]) && isFinite(+datum[\"Primary\"]) && isValid(datum[\"Secondary\"]) && isFinite(+datum[\"Secondary\"])"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "layer_1_layer_1_marks",
+      "type": "symbol",
+      "style": ["circle"],
+      "interactive": true,
+      "from": {"data": "data_2"},
+      "encode": {
+        "update": {
+          "opacity": {"value": 0.9},
+          "size": {"value": 100},
+          "fill": {"scale": "color", "field": "States"},
+          "ariaRoleDescription": {"value": "circle"},
+          "description": {
+            "signal": "\"Primary: \" + (format(datum[\"Primary\"], \"\")) + \"; Secondary: \" + (format(datum[\"Secondary\"], \"\")) + \"; States: \" + (isValid(datum[\"States\"]) ? datum[\"States\"] : \"\"+datum[\"States\"])"
+          },
+          "x": {"scale": "x", "field": "Primary"},
+          "y": {"scale": "y", "field": "Secondary"},
+          "shape": {"value": "circle"}
+        }
+      }
+    },
+    {
+      "name": "layer_1_layer_2_marks",
+      "type": "text",
+      "style": ["text"],
+      "interactive": false,
+      "from": {"data": "data_3"},
+      "encode": {
+        "update": {
+          "fontSize": {"value": 12},
+          "fontWeight": {"value": "bold"},
+          "fill": {"scale": "color", "field": "name"},
+          "description": {
+            "signal": "\"Primary: \" + (format(datum[\"Primary\"], \"\")) + \"; Secondary: \" + (format(datum[\"Secondary\"], \"\")) + \"; name: \" + (isValid(datum[\"name\"]) ? datum[\"name\"] : \"\"+datum[\"name\"]) + \"; States: \" + (isValid(datum[\"States\"]) ? datum[\"States\"] : \"\"+datum[\"States\"])"
+          },
+          "x": {"scale": "x", "field": "Primary"},
+          "y": {"scale": "y", "field": "Secondary", "offset": -12},
+          "text": {
+            "signal": "isValid(datum[\"States\"]) ? datum[\"States\"] : \"\"+datum[\"States\"]"
+          },
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"}
+        }
+      }
+    },
+    {
+      "name": "layer_1_layer_3_layer_0_marks",
+      "type": "text",
+      "style": ["text"],
+      "interactive": false,
+      "from": {"data": "data_4"},
+      "encode": {
+        "update": {
+          "fontSize": {"value": 12},
+          "fill": {"value": "red"},
+          "description": {
+            "signal": "\"Primary: \" + (format(datum[\"Primary\"], \"\")) + \"; Secondary: \" + (format(datum[\"Secondary\"], \"\")) + \"; year: \" + (isValid(datum[\"year\"]) ? datum[\"year\"] : \"\"+datum[\"year\"])"
+          },
+          "x": {"scale": "x", "field": "Primary"},
+          "y": {"scale": "y", "field": "Secondary", "offset": -12},
+          "text": {
+            "signal": "isValid(datum[\"year\"]) ? datum[\"year\"] : \"\"+datum[\"year\"]"
+          },
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"}
+        }
+      }
+    },
+    {
+      "name": "layer_1_layer_3_layer_1_marks",
+      "type": "symbol",
+      "style": ["circle"],
+      "interactive": false,
+      "from": {"data": "data_4"},
+      "encode": {
+        "update": {
+          "opacity": {"value": 0.7},
+          "fill": {"value": "red"},
+          "ariaRoleDescription": {"value": "circle"},
+          "description": {
+            "signal": "\"Primary: \" + (format(datum[\"Primary\"], \"\")) + \"; Secondary: \" + (format(datum[\"Secondary\"], \"\"))"
+          },
+          "x": {"scale": "x", "field": "Primary"},
+          "y": {"scale": "y", "field": "Secondary"},
+          "shape": {"value": "circle"}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": [0, 2500],
+      "range": [0, {"signal": "width"}],
+      "zero": true
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": [0, 5000],
+      "range": [{"signal": "height"}, 0],
+      "zero": true
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {
+        "fields": [
+          {"data": "data_2", "field": "States"},
+          {"data": "data_3", "field": "name"}
+        ],
+        "sort": true
+      },
+      "range": "category"
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "tickCount": 8,
+      "gridScale": "y",
+      "grid": true,
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "tickCount": 8,
+      "gridScale": "x",
+      "grid": true,
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Primary students",
+      "tickCount": 8,
+      "labelFlush": true,
+      "labelOverlap": true,
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "Secondary students",
+      "tickCount": 8,
+      "labelOverlap": true,
+      "zindex": 0
+    }
+  ],
+  "legends": [
+    {
+      "title": "States",
+      "fill": "color",
+      "encode": {"symbols": {"update": {"opacity": {"value": 0.9}}}}
+    }
+  ],
+  "config": {
+    "path": {"stroke": "#4572a7"},
+    "shape": {"stroke": "#4572a7"},
+    "symbol": {"fill": "#4572a7", "strokeWidth": 1.5, "size": 50},
+    "range": {
+      "category": [
+        "#C6C6C6",
+        "#aa4643",
+        "#8aa453",
+        "#71598e",
+        "#4598ae",
+        "#d98445",
+        "#94aace",
+        "#d09393",
+        "#b9cc98",
+        "#a99cbc"
+      ]
+    },
+    "axis": {
+      "bandPosition": 0.5,
+      "grid": true,
+      "gridColor": "#000000",
+      "gridOpacity": 1,
+      "gridWidth": 0.5,
+      "labelPadding": 10,
+      "tickSize": 5,
+      "tickWidth": 0.5
+    },
+    "axisBand": {"grid": false, "tickExtra": true},
+    "legend": {
+      "labelBaseline": "middle",
+      "labelFontSize": 11,
+      "symbolSize": 50,
+      "symbolType": "square"
+    },
+    "style": {
+      "arc": {"fill": "#4572a7"},
+      "area": {"fill": "#4572a7"},
+      "line": {"stroke": "#4572a7", "strokeWidth": 2},
+      "rect": {"fill": "#4572a7"}
+    }
+  }
+}
