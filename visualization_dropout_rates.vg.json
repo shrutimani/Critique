@@ -1,17 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "autosize": {"type": "fit", "contains": "padding"},
   "background": "#fff",
   "padding": 5,
-  "width": 550,
-  "height": 450,
   "title": {
-    "text": "Dropout rates in 2014 for primary students ",
+    "text": "Dropout rates for primary students in the year 2015 ",
     "frame": "group"
   },
   "data": [
     {
       "name": "source_1",
-      "url": "https://raw.githubusercontent.com/shrutimani/week-10-homework/main/primary%20data.csv",
+      "url": "https://raw.githubusercontent.com/shrutimani/week-10-homework/main/total.csv",
       "format": {"type": "csv", "delimiter": ","}
     },
     {
@@ -33,7 +32,11 @@
           "from": "source_1",
           "key": "States",
           "fields": ["properties.name"],
-          "values": ["States"]
+          "values": ["Primary", "Secondary"]
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Primary\"]) && isFinite(+datum[\"Primary\"])"
         }
       ]
     }
@@ -46,6 +49,28 @@
       "type": "equirectangular"
     }
   ],
+  "signals": [
+    {
+      "name": "width",
+      "init": "isFinite(containerSize()[0]) ? containerSize()[0] : 200",
+      "on": [
+        {
+          "update": "isFinite(containerSize()[0]) ? containerSize()[0] : 200",
+          "events": "window:resize"
+        }
+      ]
+    },
+    {
+      "name": "height",
+      "init": "isFinite(containerSize()[1]) ? containerSize()[1] : 200",
+      "on": [
+        {
+          "update": "isFinite(containerSize()[1]) ? containerSize()[1] : 200",
+          "events": "window:resize"
+        }
+      ]
+    }
+  ],
   "marks": [
     {
       "name": "marks",
@@ -55,13 +80,13 @@
       "encode": {
         "update": {
           "stroke": {"value": "white"},
-          "fill": {"scale": "color", "field": "States"},
+          "fill": {"scale": "color", "field": "Primary"},
           "tooltip": {
-            "signal": "{\"State\": isValid(datum[\"properties.name\"]) ? datum[\"properties.name\"] : \"\"+datum[\"properties.name\"], \"Total Number of dropouts\": format(datum[\"Total\"], \",\")}"
+            "signal": "{\"State\": isValid(datum[\"properties.name\"]) ? datum[\"properties.name\"] : \"\"+datum[\"properties.name\"], \"Primary dropouts\": format(datum[\"Primary\"], \",\")}"
           },
           "ariaRoleDescription": {"value": "geoshape"},
           "description": {
-            "signal": "\"States: \" + (isValid(datum[\"States\"]) ? datum[\"States\"] : \"\"+datum[\"States\"]) + \"; State: \" + (isValid(datum[\"properties.name\"]) ? datum[\"properties.name\"] : \"\"+datum[\"properties.name\"]) + \"; Total Number of dropouts: \" + (format(datum[\"Total\"], \",\"))"
+            "signal": "\"Primary: \" + (format(datum[\"Primary\"], \"\")) + \"; State: \" + (isValid(datum[\"properties.name\"]) ? datum[\"properties.name\"] : \"\"+datum[\"properties.name\"]) + \"; Primary dropouts: \" + (format(datum[\"Primary\"], \",\"))"
           }
         }
       },
@@ -71,17 +96,18 @@
   "scales": [
     {
       "name": "color",
-      "type": "ordinal",
-      "domain": {"data": "source_0", "field": "States", "sort": true},
-      "range": "ordinal",
+      "type": "log",
+      "domain": [20, 2000],
+      "range": "heatmap",
       "interpolate": "hcl"
     }
   ],
   "legends": [
     {
-      "title": "Top 10 States",
+      "title": "Number of dropouts",
       "fill": "color",
-      "encode": {"symbols": {"update": {"stroke": {"value": "white"}}}}
+      "gradientLength": {"signal": "clamp(height, 64, 200)"},
+      "labelOverlap": "greedy"
     }
   ],
   "config": {
