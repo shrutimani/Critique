@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "background": "#fff",
+  "background": "#F9F3A7",
   "padding": 5,
   "width": 800,
   "height": 500,
@@ -55,7 +55,7 @@
   "signals": [
     {
       "name": "zoom_level",
-      "value": 1500,
+      "value": 3000,
       "bind": {
         "input": "range",
         "min": 500,
@@ -89,7 +89,7 @@
       "from": {"data": "source_0"},
       "encode": {
         "update": {
-          "fill": {"value": "lightgray"},
+          "fill": {"value": "black"},
           "stroke": {"value": "white"},
           "ariaRoleDescription": {"value": "geoshape"}
         }
@@ -125,7 +125,7 @@
       "encode": {
         "update": {
           "dy": {"value": -10},
-          "fill": {"value": "black"},
+          "fill": {"value": "white"},
           "description": {
             "signal": "\"lng: \" + (format(datum[\"lng\"], \"\")) + \"; lat: \" + (format(datum[\"lat\"], \"\")) + \"; city: \" + (isValid(datum[\"city\"]) ? datum[\"city\"] : \"\"+datum[\"city\"])"
           },

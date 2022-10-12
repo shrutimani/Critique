@@ -1,10 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "autosize": {"type": "fit", "contains": "padding"},
-  "background": "#fff",
+  "background": "#F9F3A7",
   "padding": 5,
+  "width": 500,
+  "height": 300,
   "title": {
-    "text": "Dropout rates for primary students in the year 2015 ",
     "frame": "group"
   },
   "data": [
@@ -116,7 +116,7 @@
     "symbol": {"fill": "#4572a7", "strokeWidth": 1.5, "size": 50},
     "range": {
       "category": [
-        "#C6C6C6",
+        "#4572a7",
         "#aa4643",
         "#8aa453",
         "#71598e",
