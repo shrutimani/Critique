@@ -11,7 +11,7 @@
     {
       "name": "source_1",
       "url": "https://raw.githubusercontent.com/shrutimani/week-10-homework/main/total.csv",
-      "format": {"type": "csv", "delimiter": ","}
+      "format": {"type": "csv"}
     },
     {
       "name": "source_0",
