@@ -1,0 +1,362 @@
+[
+ {
+   "states": "Andaman & Nicobar Islands",
+   "year": 2013,
+   "girls": 93.44,
+   "gender": "girl "
+ },
+ {
+   "states": "Andaman & Nicobar Islands",
+   "year": 2013,
+   "girls": 94.52,
+   "gender": "boy"
+ },
+ {
+   "states": "Andaman & Nicobar Islands",
+   "year": 2014,
+   "girls": 100,
+   "gender": "girl "
+ },
+ {
+   "states": "Andaman & Nicobar Islands",
+   "year": 2014,
+   "girls": 100,
+   "gender": "boy"
+ },
+ {
+   "states": "Andaman & Nicobar Islands",
+   "year": 2015,
+   "girls": 100,
+   "gender": "girl "
+ },
+ {
+   "states": "Andaman & Nicobar Islands",
+   "year": 2015,
+   "girls": 100,
+   "gender": "boy"
+ },
+ {
+   "states": "Andhra Pradesh",
+   "year": 2013,
+   "girls": 81.31,
+   "gender": "girl "
+ },
+ {
+   "states": "Andhra Pradesh",
+   "year": 2013,
+   "girls": 56.88,
+   "gender": "boy"
+ },
+ {
+   "states": "Andhra Pradesh",
+   "year": 2014,
+   "girls": 98.07,
+   "gender": "girl "
+ },
+ {
+   "states": "Andhra Pradesh",
+   "year": 2014,
+   "girls": 65.34,
+   "gender": "boy"
+ },
+ {
+   "states": "Andhra Pradesh",
+   "year": 2015,
+   "girls": 99.72,
+   "gender": "girl "
+ },
+ {
+   "states": "Andhra Pradesh",
+   "year": 2015,
+   "girls": 99.69,
+   "gender": "boy"
+ },
+ {
+   "states": "Arunachal Pradesh",
+   "year": 2013,
+   "girls": 76.9,
+   "gender": "girl "
+ },
+ {
+   "states": "Arunachal Pradesh",
+   "year": 2013,
+   "girls": 48.73,
+   "gender": "boy"
+ },
+ {
+   "states": "Arunachal Pradesh",
+   "year": 2014,
+   "girls": 96.89,
+   "gender": "girl "
+ },
+ {
+   "states": "Arunachal Pradesh",
+   "year": 2014,
+   "girls": 95.97,
+   "gender": "boy"
+ },
+ {
+   "states": "Arunachal Pradesh",
+   "year": 2015,
+   "girls": 96.56,
+   "gender": "girl "
+ },
+ {
+   "states": "Arunachal Pradesh",
+   "year": 2015,
+   "girls": 95.65,
+   "gender": "boy"
+ },
+ {
+   "states": "Assam",
+   "year": 2013,
+   "girls": 75.28,
+   "gender": "girl "
+ },
+ {
+   "states": "Assam",
+   "year": 2013,
+   "girls": 60.17,
+   "gender": "boy"
+ },
+ {
+   "states": "Assam",
+   "year": 2014,
+   "girls": 74.86,
+   "gender": "girl "
+ },
+ {
+   "states": "Assam",
+   "year": 2014,
+   "girls": 54.8,
+   "gender": "boy"
+ },
+ {
+   "states": "Assam",
+   "year": 2015,
+   "girls": 83.94,
+   "gender": "girl "
+ },
+ {
+   "states": "Assam",
+   "year": 2015,
+   "girls": 82.8,
+   "gender": "boy"
+ },
+ {
+   "states": "Bihar",
+   "year": 2013,
+   "girls": 75.41,
+   "gender": "girl "
+ },
+ {
+   "states": "Bihar",
+   "year": 2013,
+   "girls": 73.42,
+   "gender": "boy"
+ },
+ {
+   "states": "Bihar",
+   "year": 2014,
+   "girls": 76.3,
+   "gender": "girl "
+ },
+ {
+   "states": "Bihar",
+   "year": 2014,
+   "girls": 73.92,
+   "gender": "boy"
+ },
+ {
+   "states": "Bihar",
+   "year": 2015,
+   "girls": 90.05,
+   "gender": "girl "
+ },
+ {
+   "states": "Bihar",
+   "year": 2015,
+   "girls": 89.16,
+   "gender": "boy"
+ },
+ {
+   "states": "Chandigarh",
+   "year": 2013,
+   "girls": 100,
+   "gender": "girl "
+ },
+ {
+   "states": "Chandigarh",
+   "year": 2013,
+   "girls": 100,
+   "gender": "boy"
+ },
+ {
+   "states": "Chandigarh",
+   "year": 2014,
+   "girls": 100,
+   "gender": "girl "
+ },
+ {
+   "states": "Chandigarh",
+   "year": 2014,
+   "girls": 100,
+   "gender": "boy"
+ },
+ {
+   "states": "Chandigarh",
+   "year": 2015,
+   "girls": 100,
+   "gender": "girl "
+ },
+ {
+   "states": "Chandigarh",
+   "year": 2015,
+   "girls": 100,
+   "gender": "boy"
+ },
+ {
+   "states": "Chhattisgarh",
+   "year": 2013,
+   "girls": 94.1,
+   "gender": "girl "
+ },
+ {
+   "states": "Chhattisgarh",
+   "year": 2013,
+   "girls": 82.85,
+   "gender": "boy"
+ },
+ {
+   "states": "Chhattisgarh",
+   "year": 2014,
+   "girls": 92,
+   "gender": "girl "
+ },
+ {
+   "states": "Chhattisgarh",
+   "year": 2014,
+   "girls": 76.06,
+   "gender": "boy"
+ },
+ {
+   "states": "Chhattisgarh",
+   "year": 2015,
+   "girls": 99.16,
+   "gender": "girl "
+ },
+ {
+   "states": "Chhattisgarh",
+   "year": 2015,
+   "girls": 98.5,
+   "gender": "boy"
+ },
+ {
+   "states": "Delhi",
+   "year": 2013,
+   "girls": 100,
+   "gender": "girl "
+ },
+ {
+   "states": "Delhi",
+   "year": 2013,
+   "girls": 100,
+   "gender": "boy"
+ },
+ {
+   "states": "Delhi",
+   "year": 2014,
+   "girls": 100,
+   "gender": "girl "
+ },
+ {
+   "states": "Delhi",
+   "year": 2014,
+   "girls": 100,
+   "gender": "boy"
+ },
+ {
+   "states": "Delhi",
+   "year": 2015,
+   "girls": 100,
+   "gender": "girl "
+ },
+ {
+   "states": "Delhi",
+   "year": 2015,
+   "girls": 100,
+   "gender": "boy"
+ },
+ {
+   "states": "Goa",
+   "year": 2013,
+   "girls": 98.31,
+   "gender": "girl "
+ },
+ {
+   "states": "Goa",
+   "year": 2013,
+   "girls": 87.07,
+   "gender": "boy"
+ },
+ {
+   "states": "Goa",
+   "year": 2014,
+   "girls": 99.42,
+   "gender": "girl "
+ },
+ {
+   "states": "Goa",
+   "year": 2014,
+   "girls": 90.85,
+   "gender": "boy"
+ },
+ {
+   "states": "Goa",
+   "year": 2015,
+   "girls": 100,
+   "gender": "girl "
+ },
+ {
+   "states": "Goa",
+   "year": 2015,
+   "girls": 100,
+   "gender": "boy"
+ },
+ {
+   "states": "All India",
+   "year": 2013,
+   "girls": 91.23,
+   "gender": "girl "
+ },
+ {
+   "states": "All India",
+   "year": 2013,
+   "girls": 86.56,
+   "gender": "boy"
+ },
+ {
+   "states": "All India",
+   "year": 2014,
+   "girls": 93.08,
+   "gender": "girl "
+ },
+ {
+   "states": "All India",
+   "year": 2014,
+   "girls": 88.62,
+   "gender": "boy"
+ },
+ {
+   "states": "All India",
+   "year": 2015,
+   "girls": 97.52,
+   "gender": "girl "
+ },
+ {
+   "states": "All India",
+   "year": 2015,
+   "girls": 97.02,
+   "gender": "boy"
+ }
+]
