@@ -1,0 +1,497 @@
+[
+ {
+   "category": "computer",
+   "price": 53.06,
+   "year": 2013
+ },
+ {
+   "category": "computer",
+   "price": 29.57,
+   "year": 2013
+ },
+ {
+   "category": "computer",
+   "price": 24.28,
+   "year": 2013
+ },
+ {
+   "category": "computer",
+   "price": 8.85,
+   "year": 2013
+ },
+ {
+   "category": "computer",
+   "price": 5.47,
+   "year": 2013
+ },
+ {
+   "category": "computer",
+   "price": 95.83,
+   "year": 2013
+ },
+ {
+   "category": "computer",
+   "price": 9.8,
+   "year": 2013
+ },
+ {
+   "category": "computer",
+   "price": 81.56,
+   "year": 2013
+ },
+ {
+   "category": "computer",
+   "price": 40.63,
+   "year": 2013
+ },
+ {
+   "category": "computer",
+   "price": 72.08,
+   "year": 2013
+ },
+ {
+   "category": "computer",
+   "price": 24.08,
+   "year": 2013
+ },
+ {
+   "category": "electricty",
+   "price": 88.86,
+   "year": 2013
+ },
+ {
+   "category": "electricty",
+   "price": 90.34,
+   "year": 2013
+ },
+ {
+   "category": "electricty",
+   "price": 36.35,
+   "year": 2013
+ },
+ {
+   "category": "electricty",
+   "price": 19.39,
+   "year": 2013
+ },
+ {
+   "category": "electricty",
+   "price": 9.96,
+   "year": 2013
+ },
+ {
+   "category": "electricty",
+   "price": 100,
+   "year": 2013
+ },
+ {
+   "category": "electricty",
+   "price": 57.28,
+   "year": 2013
+ },
+ {
+   "category": "electricty",
+   "price": 100,
+   "year": 2013
+ },
+ {
+   "category": "electricty",
+   "price": 98.17,
+   "year": 2013
+ },
+ {
+   "category": "electricty",
+   "price": 99.72,
+   "year": 2013
+ },
+ {
+   "category": "electricty",
+   "price": 56.78,
+   "year": 2013
+ },
+ {
+   "category": "water",
+   "price": 98.69,
+   "year": 2013
+ },
+ {
+   "category": "water",
+   "price": 90.35,
+   "year": 2013
+ },
+ {
+   "category": "water",
+   "price": 79.79,
+   "year": 2013
+ },
+ {
+   "category": "water",
+   "price": 80.3,
+   "year": 2013
+ },
+ {
+   "category": "water",
+   "price": 92.53,
+   "year": 2013
+ },
+ {
+   "category": "water",
+   "price": 100,
+   "year": 2013
+ },
+ {
+   "category": "water",
+   "price": 95.47,
+   "year": 2013
+ },
+ {
+   "category": "water",
+   "price": 100,
+   "year": 2013
+ },
+ {
+   "category": "water",
+   "price": 98.61,
+   "year": 2013
+ },
+ {
+   "category": "water",
+   "price": 99.97,
+   "year": 2013
+ },
+ {
+   "category": "water",
+   "price": 95.4,
+   "year": 2013
+ },
+ {
+   "category": "computer",
+   "price": 57.25,
+   "year": 2014
+ },
+ {
+   "category": "computer",
+   "price": 28.06,
+   "year": 2014
+ },
+ {
+   "category": "computer",
+   "price": 24.68,
+   "year": 2014
+ },
+ {
+   "category": "computer",
+   "price": 9.83,
+   "year": 2014
+ },
+ {
+   "category": "computer",
+   "price": 8.19,
+   "year": 2014
+ },
+ {
+   "category": "computer",
+   "price": 95.43,
+   "year": 2014
+ },
+ {
+   "category": "computer",
+   "price": 11.88,
+   "year": 2014
+ },
+ {
+   "category": "computer",
+   "price": 81,
+   "year": 2014
+ },
+ {
+   "category": "computer",
+   "price": 43.51,
+   "year": 2014
+ },
+ {
+   "category": "computer",
+   "price": 75.22,
+   "year": 2014
+ },
+ {
+   "category": "computer",
+   "price": 26.42,
+   "year": 2014
+ },
+ {
+   "category": "electricty",
+   "price": 88.89,
+   "year": 2014
+ },
+ {
+   "category": "electricty",
+   "price": 92.76,
+   "year": 2014
+ },
+ {
+   "category": "electricty",
+   "price": 38.6,
+   "year": 2014
+ },
+ {
+   "category": "electricty",
+   "price": 22.4,
+   "year": 2014
+ },
+ {
+   "category": "electricty",
+   "price": 25.22,
+   "year": 2014
+ },
+ {
+   "category": "electricty",
+   "price": 100,
+   "year": 2014
+ },
+ {
+   "category": "electricty",
+   "price": 66.88,
+   "year": 2014
+ },
+ {
+   "category": "electricty",
+   "price": 100,
+   "year": 2014
+ },
+ {
+   "category": "electricty",
+   "price": 98.72,
+   "year": 2014
+ },
+ {
+   "category": "electricty",
+   "price": 99.72,
+   "year": 2014
+ },
+ {
+   "category": "electricty",
+   "price": 60.01,
+   "year": 2014
+ },
+ {
+   "category": "water",
+   "price": 99.52,
+   "year": 2014
+ },
+ {
+   "category": "water",
+   "price": 93.74,
+   "year": 2014
+ },
+ {
+   "category": "water",
+   "price": 80.64,
+   "year": 2014
+ },
+ {
+   "category": "water",
+   "price": 83.36,
+   "year": 2014
+ },
+ {
+   "category": "water",
+   "price": 92.74,
+   "year": 2014
+ },
+ {
+   "category": "water",
+   "price": 100,
+   "year": 2014
+ },
+ {
+   "category": "water",
+   "price": 97.03,
+   "year": 2014
+ },
+ {
+   "category": "water",
+   "price": 100,
+   "year": 2014
+ },
+ {
+   "category": "water",
+   "price": 99.23,
+   "year": 2014
+ },
+ {
+   "category": "water",
+   "price": 99.88,
+   "year": 2014
+ },
+ {
+   "category": "water",
+   "price": 96.12,
+   "year": 2014
+ },
+ {
+   "category": "computer",
+   "price": 57,
+   "year": 2015
+ },
+ {
+   "category": "computer",
+   "price": 30.59,
+   "year": 2015
+ },
+ {
+   "category": "computer",
+   "price": 24.36,
+   "year": 2015
+ },
+ {
+   "category": "computer",
+   "price": 10.76,
+   "year": 2015
+ },
+ {
+   "category": "computer",
+   "price": 9.37,
+   "year": 2015
+ },
+ {
+   "category": "computer",
+   "price": 94.53,
+   "year": 2015
+ },
+ {
+   "category": "computer",
+   "price": 12.7,
+   "year": 2015
+ },
+ {
+   "category": "computer",
+   "price": 83.89,
+   "year": 2015
+ },
+ {
+   "category": "computer",
+   "price": 44.72,
+   "year": 2015
+ },
+ {
+   "category": "computer",
+   "price": 75.5,
+   "year": 2015
+ },
+ {
+   "category": "computer",
+   "price": 27.31,
+   "year": 2015
+ },
+ {
+   "category": "electricty",
+   "price": 90.1,
+   "year": 2015
+ },
+ {
+   "category": "electricty",
+   "price": 93.5,
+   "year": 2015
+ },
+ {
+   "category": "electricty",
+   "price": 39.54,
+   "year": 2015
+ },
+ {
+   "category": "electricty",
+   "price": 25.55,
+   "year": 2015
+ },
+ {
+   "category": "electricty",
+   "price": 37.78,
+   "year": 2015
+ },
+ {
+   "category": "electricty",
+   "price": 100,
+   "year": 2015
+ },
+ {
+   "category": "electricty",
+   "price": 72.66,
+   "year": 2015
+ },
+ {
+   "category": "electricty",
+   "price": 100,
+   "year": 2015
+ },
+ {
+   "category": "electricty",
+   "price": 99.87,
+   "year": 2015
+ },
+ {
+   "category": "electricty",
+   "price": 99.73,
+   "year": 2015
+ },
+ {
+   "category": "electricty",
+   "price": 62.81,
+   "year": 2015
+ },
+ {
+   "category": "water",
+   "price": 100,
+   "year": 2015
+ },
+ {
+   "category": "water",
+   "price": 95.37,
+   "year": 2015
+ },
+ {
+   "category": "water",
+   "price": 81.47,
+   "year": 2015
+ },
+ {
+   "category": "water",
+   "price": 86.21,
+   "year": 2015
+ },
+ {
+   "category": "water",
+   "price": 94.43,
+   "year": 2015
+ },
+ {
+   "category": "water",
+   "price": 100,
+   "year": 2015
+ },
+ {
+   "category": "water",
+   "price": 99.06,
+   "year": 2015
+ },
+ {
+   "category": "water",
+   "price": 100,
+   "year": 2015
+ },
+ {
+   "category": "water",
+   "price": 100,
+   "year": 2015
+ },
+ {
+   "category": "water",
+   "price": 99.95,
+   "year": 2015
+ },
+ {
+   "category": "water",
+   "price": 96.81,
+   "year": 2015
+ }
+]
