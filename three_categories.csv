@@ -1,100 +1,100 @@
-category,price,year
-computer,53.06,2013
-computer,29.57,2013
-computer,24.28,2013
-computer,8.85,2013
-computer,5.47,2013
-computer,95.83,2013
-computer,9.8,2013
-computer,81.56,2013
-computer,40.63,2013
-computer,72.08,2013
-computer,24.08,2013
-electricity,88.86,2013
-electricity,90.34,2013
-electricity,36.35,2013
-electricity,19.39,2013
-electricity,9.96,2013
-electricity,100,2013
-electricity,57.28,2013
-electricity,100,2013
-electricity,98.17,2013
-electricity,99.72,2013
-electricity,56.78,2013
-water,98.69,2013
-water,90.35,2013
-water,79.79,2013
-water,80.3,2013
-water,92.53,2013
-water,100,2013
-water,95.47,2013
-water,100,2013
-water,98.61,2013
-water,99.97,2013
-water,95.4,2013
-computer,57.25,2014
-computer,28.06,2014
-computer,24.68,2014
-computer,9.83,2014
-computer,8.19,2014
-computer,95.43,2014
-computer,11.88,2014
-computer,81,2014
-computer,43.51,2014
-computer,75.22,2014
-computer,26.42,2014
-electricity,88.89,2014
-electricity,92.76,2014
-electricity,38.6,2014
-electricity,22.4,2014
-electricity,25.22,2014
-electricity,100,2014
-electricity,66.88,2014
-electricity,100,2014
-electricity,98.72,2014
-electricity,99.72,2014
-electricity,60.01,2014
-water,99.52,2014
-water,93.74,2014
-water,80.64,2014
-water,83.36,2014
-water,92.74,2014
-water,100,2014
-water,97.03,2014
-water,100,2014
-water,99.23,2014
-water,99.88,2014
-water,96.12,2014
-computer,57,2015
-computer,30.59,2015
-computer,24.36,2015
-computer,10.76,2015
-computer,9.37,2015
-computer,94.53,2015
-computer,12.7,2015
-computer,83.89,2015
-computer,44.72,2015
-computer,75.5,2015
-computer,27.31,2015
-electricity,90.1,2015
-electricity,93.5,2015
-electricity,39.54,2015
-electricity,25.55,2015
-electricity,37.78,2015
-electricity,100,2015
-electricity,72.66,2015
-electricity,100,2015
-electricity,99.87,2015
-electricity,99.73,2015
-electricity,62.81,2015
-water,100,2015
-water,95.37,2015
-water,81.47,2015
-water,86.21,2015
-water,94.43,2015
-water,100,2015
-water,99.06,2015
-water,100,2015
-water,100,2015
-water,99.95,2015
-water,96.81,2015
+category,price,year,state
+computer,53.06,2013,Andaman & Nicobar Islands
+computer,29.57,2013,Andhra Pradesh
+computer,24.28,2013,Arunachal Pradesh
+computer,8.85,2013,Assam
+computer,5.47,2013,Bihar
+computer,95.83,2013,Chandigarh
+computer,9.8,2013,Chhattisgarh
+computer,81.56,2013,Delhi
+computer,40.63,2013,Goa
+computer,72.08,2013,Gujarat
+computer,24.08,2013,All India
+electricity,88.86,2013,Andaman & Nicobar Islands
+electricity,90.34,2013,Andhra Pradesh
+electricity,36.35,2013,Arunachal Pradesh
+electricity,19.39,2013,Assam
+electricity,9.96,2013,Bihar
+electricity,100,2013,Chandigarh
+electricity,57.28,2013,Chhattisgarh
+electricity,100,2013,Delhi
+electricity,98.17,2013,Goa
+electricity,99.72,2013,Gujarat
+electricity,56.78,2013,All India
+water,98.69,2013,Andaman & Nicobar Islands
+water,90.35,2013,Andhra Pradesh
+water,79.79,2013,Arunachal Pradesh
+water,80.3,2013,Assam
+water,92.53,2013,Bihar
+water,100,2013,Chandigarh
+water,95.47,2013,Chhattisgarh
+water,100,2013,Delhi
+water,98.61,2013,Goa
+water,99.97,2013,Gujarat
+water,95.4,2013,All India
+computer,57.25,2014,Andaman & Nicobar Islands
+computer,28.06,2014,Andhra Pradesh
+computer,24.68,2014,Arunachal Pradesh
+computer,9.83,2014,Assam
+computer,8.19,2014,Bihar
+computer,95.43,2014,Chandigarh
+computer,11.88,2014,Chhattisgarh
+computer,81,2014,Delhi
+computer,43.51,2014,Goa
+computer,75.22,2014,Gujarat
+computer,26.42,2014,All India
+electricity,88.89,2014,Andaman & Nicobar Islands
+electricity,92.76,2014,Andhra Pradesh
+electricity,38.6,2014,Arunachal Pradesh
+electricity,22.4,2014,Assam
+electricity,25.22,2014,Bihar
+electricity,100,2014,Chandigarh
+electricity,66.88,2014,Chhattisgarh
+electricity,100,2014,Delhi
+electricity,98.72,2014,Goa
+electricity,99.72,2014,Gujarat
+electricity,60.01,2014,All India
+water,99.52,2014,Andaman & Nicobar Islands
+water,93.74,2014,Andhra Pradesh
+water,80.64,2014,Arunachal Pradesh
+water,83.36,2014,Assam
+water,92.74,2014,Bihar
+water,100,2014,Chandigarh
+water,97.03,2014,Chhattisgarh
+water,100,2014,Delhi
+water,99.23,2014,Goa
+water,99.88,2014,Gujarat
+water,96.12,2014,All India
+computer,57,2015,Andaman & Nicobar Islands
+computer,30.59,2015,Andhra Pradesh
+computer,24.36,2015,Arunachal Pradesh
+computer,10.76,2015,Assam
+computer,9.37,2015,Bihar
+computer,94.53,2015,Chandigarh
+computer,12.7,2015,Chhattisgarh
+computer,83.89,2015,Delhi
+computer,44.72,2015,Goa
+computer,75.5,2015,Gujarat
+computer,27.31,2015,All India
+electricity,90.1,2015,Andaman & Nicobar Islands
+electricity,93.5,2015,Andhra Pradesh
+electricity,39.54,2015,Arunachal Pradesh
+electricity,25.55,2015,Assam
+electricity,37.78,2015,Bihar
+electricity,100,2015,Chandigarh
+electricity,72.66,2015,Chhattisgarh
+electricity,100,2015,Delhi
+electricity,99.87,2015,Goa
+electricity,99.73,2015,Gujarat
+electricity,62.81,2015,All India
+water,100,2015,Andaman & Nicobar Islands
+water,95.37,2015,Andhra Pradesh
+water,81.47,2015,Arunachal Pradesh
+water,86.21,2015,Assam
+water,94.43,2015,Bihar
+water,100,2015,Chandigarh
+water,99.06,2015,Chhattisgarh
+water,100,2015,Delhi
+water,100,2015,Goa
+water,99.95,2015,Gujarat
+water,96.81,2015,All India
