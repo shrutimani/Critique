@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "background": null,
   "padding": 5,
-  "width": 300,
-  "height": 200,
+  "width": 330,
+  "height": 350,
   "style": "cell",
   "data": [
     {
@@ -109,26 +109,43 @@
       "maxExtent": 0,
       "minExtent": 0,
       "ticks": false,
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     },
     {
       "scale": "x",
       "orient": "bottom",
       "grid": false,
-      "title": "Number of dropouts",
+      "title": "Number of toilets",
       "labelFlush": true,
       "labelOverlap": true,
       "tickCount": {"signal": "ceil(width/40)"},
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     },
     {
       "scale": "y",
       "orient": "left",
       "grid": false,
       "title": "Top 10 states",
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     }
   ],
-  "legends": [{"title": "Gender", "fill": "color", "symbolType": "square"}],
+  "legends": [
+    {
+      "title": "Gender", 
+      "fill": "color",
+      "symbolType": "square",
+      "titleColor":"white",
+      "labelColor":"white"
+    }
+  ],
   "config": {}
 }

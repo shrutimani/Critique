@@ -124,19 +124,25 @@
     "axis": {
       "bandPosition": 0.5,
       "grid": true,
-      "gridColor": "#000000",
       "gridOpacity": 1,
       "gridWidth": 0.5,
       "labelPadding": 10,
       "tickSize": 5,
-      "tickWidth": 0.5
+      "tickWidth": 0.5,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     },
     "axisBand": {"grid": false, "tickExtra": true},
     "legend": {
       "labelBaseline": "middle",
       "labelFontSize": 11,
       "symbolSize": 50,
-      "symbolType": "square"
+      "symbolType": "square",
+      "color":"white",
+      "titleColor":"white",
+      "labelColor":"white"
+
     },
     "style": {
       "arc": {"fill": "#4572a7"},

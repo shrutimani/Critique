@@ -39,7 +39,7 @@
       "encode": {
         "update": {
           "opacity": {"value": 0.8},
-          "stroke": {"value": "black"},
+          "stroke": {"value": "white"},
           "strokeWidth": {"value": 1},
           "fill": {"scale": "color", "field": "States"},
           "tooltip": {
@@ -95,14 +95,20 @@
       "labelAlign": "right",
       "labelAngle": 270,
       "labelBaseline": "middle",
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     },
     {
       "scale": "y",
       "orient": "left",
       "grid": false,
       "title": "Number of dropouts",
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     }
   ],
   "legends": [
@@ -110,23 +116,27 @@
       "fill": "color",
       "symbolType": "circle",
       "title": "States",
+      "titleColor":"white",
+      "labelColor":"white",
       "encode": {
         "symbols": {
-          "update": {"stroke": {"value": "black"}, "opacity": {"value": 0.8}}
+          "update": {"stroke": {"value": "white"}, "opacity": {"value": 0.8}}
         }
       }
     },
     {
       "clipHeight": 50,
       "title": "Size of dropouts",
+      "titleColor":"white",
+      "labelColor":"white",
       "size": "size",
       "symbolType": "circle",
       "orient":"left",
       "encode": {
         "symbols": {
           "update": {
-            "fill": {"value": "black"},
-            "stroke": {"value": "black"},
+            "fill": {"value": "white"},
+            "stroke": {"value": "white"},
             "fillOpacity": {"value": 0.8},
             "opacity": {"value": 0.8}
           }

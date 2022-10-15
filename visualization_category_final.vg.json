@@ -1,10 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "US State - County Analysis",
-  "background": "white",
+  "background": null,
   "padding": 5,
   "width": 330,
-  "height": 300,
+  "height": 250,
   "style": "cell",
   "data": [
     {
@@ -92,7 +91,10 @@
       "maxExtent": 0,
       "minExtent": 0,
       "ticks": false,
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     },
     {
       "scale": "x",
@@ -102,7 +104,10 @@
       "labelAlign": "right",
       "labelAngle": 270,
       "labelBaseline": "middle",
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     },
     {
       "scale": "y",
@@ -111,7 +116,10 @@
       "title": "Percentage dropouts",
       "labelOverlap": true,
       "tickCount": {"signal": "ceil(height/40)"},
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     }
   ],
   "config": {}

@@ -12,6 +12,10 @@
       "values": [
         {
           "unit": "layer_1_layer_1",
+          "color":"white",
+          "gridColor":"white",
+          "labelColor":"white",
+          "titleColor":"white",
           "fields": [{"type": "E", "field": "year"}],
           "values": [2013]
         }
@@ -231,7 +235,7 @@
         "update": {
           "opacity": {"value": 0.06},
           "fontSize": {"value": 100},
-          "fill": {"value": "black"},
+          "fill": {"value": "white"},
           "description": {
             "signal": "\"year: \" + (isValid(datum[\"year\"]) ? datum[\"year\"] : \"\"+datum[\"year\"])"
           },
@@ -272,7 +276,7 @@
           "encode": {
             "update": {
               "strokeCap": {"value": "round"},
-              "stroke": {"value": "black"},
+              "stroke": {"value": "white"},
               "opacity": [
                 {
                   "test": "(length(data(\"hovered_store\")) && vlSelectionTest(\"hovered_store\", datum)) || (length(data(\"clicked_store\")) && vlSelectionTest(\"clicked_store\", datum))",
@@ -424,7 +428,10 @@
       "maxExtent": 0,
       "minExtent": 0,
       "ticks": false,
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     },
     {
       "scale": "y",
@@ -438,7 +445,10 @@
       "maxExtent": 0,
       "minExtent": 0,
       "ticks": false,
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     },
     {
       "scale": "x",
@@ -448,7 +458,10 @@
       "tickCount": 8,
       "labelFlush": true,
       "labelOverlap": true,
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     },
     {
       "scale": "y",
@@ -457,7 +470,10 @@
       "title": "Secondary students",
       "tickCount": 8,
       "labelOverlap": true,
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     }
   ],
   "legends": [
@@ -465,6 +481,8 @@
       "title": "States",
       "fill": "color",
       "symbolType": "circle",
+      "titleColor":"white",
+      "labelColor":"white",
       "encode": {"symbols": {"update": {"opacity": {"value": 0.9}}}}
     }
   ],
