@@ -14,8 +14,6 @@ vegaEmbed("#scatter", scatter, opt).then(function(result) {
 }).catch(console.error);
 
 
-
-
 var population_zoom = "visualization_zoom_population.vg.json";
 vegaEmbed("#population_zoom", population_zoom, opt).then(function(result) {
 // Access the Vega view instance
