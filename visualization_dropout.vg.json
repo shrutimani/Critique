@@ -1,0 +1,137 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
+  "width": 500,
+  "height": 500,
+  "style": "cell",
+  "data": [
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/shrutimani/Data-Vis-2/main/total.csv",
+      "format": {"type": "csv", "delimiter": ","},
+      "transform": [
+        {"type": "filter", "expr": "datum.year == Year_Selection"},
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"total\"]) && isFinite(+datum[\"total\"])"
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "Year_Selection",
+      "value": 2013,
+      "bind": {
+        "input": "select",
+        "options": [2013, 2014, 2015],
+        "name": "Year Selection"
+      }
+    }
+  ],
+  "marks": [
+    {
+      "name": "marks",
+      "type": "symbol",
+      "style": ["circle"],
+      "from": {"data": "source_0"},
+      "encode": {
+        "update": {
+          "opacity": {"value": 0.8},
+          "stroke": {"value": "black"},
+          "strokeWidth": {"value": 1},
+          "fill": {"scale": "color", "field": "States"},
+          "tooltip": {
+            "signal": "{\"State\": isValid(datum[\"States\"]) ? datum[\"States\"] : \"\"+datum[\"States\"], \"Number of dropouts\": isValid(datum[\"total\"]) ? datum[\"total\"] : \"\"+datum[\"total\"]}"
+          },
+          "ariaRoleDescription": {"value": "circle"},
+          "description": {
+            "signal": "\"States: \" + (isValid(datum[\"States\"]) ? datum[\"States\"] : \"\"+datum[\"States\"]) + \"; total: \" + (isValid(datum[\"total\"]) ? datum[\"total\"] : \"\"+datum[\"total\"]) + \"; Size of dropouts: \" + (format(datum[\"total\"], \"\")) + \"; State: \" + (isValid(datum[\"States\"]) ? datum[\"States\"] : \"\"+datum[\"States\"]) + \"; Number of dropouts: \" + (isValid(datum[\"total\"]) ? datum[\"total\"] : \"\"+datum[\"total\"])"
+          },
+          "x": {"scale": "x", "field": "States"},
+          "y": {"scale": "y", "field": "total"},
+          "size": {"scale": "size", "field": "total"},
+          "shape": {"value": "circle"}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "point",
+      "domain": {"data": "source_0", "field": "States", "sort": true},
+      "range": [0, {"signal": "width"}],
+      "padding": 0.5
+    },
+    {
+      "name": "y",
+      "type": "point",
+      "domain": {"data": "source_0", "field": "total", "sort": true},
+      "range": [0, {"signal": "height"}],
+      "padding": 0.5
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "source_0", "field": "States", "sort": true},
+      "range": "category"
+    },
+    {
+      "name": "size",
+      "type": "linear",
+      "domain": {"data": "source_0", "field": "total"},
+      "range": [0, 2500],
+      "zero": true
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "States",
+      "labelAlign": "right",
+      "labelAngle": 270,
+      "labelBaseline": "middle",
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "Number of dropouts",
+      "zindex": 0
+    }
+  ],
+  "legends": [
+    {
+      "fill": "color",
+      "symbolType": "circle",
+      "title": "States",
+      "encode": {
+        "symbols": {
+          "update": {"stroke": {"value": "black"}, "opacity": {"value": 0.8}}
+        }
+      }
+    },
+    {
+      "clipHeight": 50,
+      "title": "Size of dropouts",
+      "size": "size",
+      "symbolType": "circle",
+      "encode": {
+        "symbols": {
+          "update": {
+            "fill": {"value": "black"},
+            "stroke": {"value": "black"},
+            "fillOpacity": {"value": 0.8},
+            "opacity": {"value": 0.8}
+          }
+        }
+      }
+    }
+  ],
+  "config": {}
+}

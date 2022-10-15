@@ -1,7 +1,7 @@
 var opt = {
     actions: false
 }
-var dropout_rates = "new_drop_out.vg.json";
+var dropout_rates = "visualization_dropout.vg.json";
 vegaEmbed("#dropout_rates", dropout_rates, opt).then(function(result) {
 // Access the Vega view instance
 //(https://vega.github.io/vega/docs/api/view/) as result.view
