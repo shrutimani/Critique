@@ -7,7 +7,7 @@ vegaEmbed("#dropout_rates", dropout_rates, opt).then(function(result) {
 //(https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-var scatter = "int_visualization.vg.json";
+var scatter = "visualization_scatter.vg.json";
 vegaEmbed("#scatter", scatter, opt).then(function(result) {
 // Access the Vega view instance
 //(https://vega.github.io/vega/docs/api/view/) as result.view
