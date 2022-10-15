@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "US State - County Analysis",
-  "background": null,
+  "background": "white",
   "padding": 5,
   "width": 330,
   "height": 300,
@@ -47,8 +47,11 @@
       "encode": {
         "update": {
           "stroke": {"value": "#4c78a8"},
+          "tooltip": {
+            "signal": "{\"state\": isValid(datum[\"state\"]) ? datum[\"state\"] : \"\"+datum[\"state\"], \"price\": format(datum[\"price\"], \"\")}"
+          },
           "description": {
-            "signal": "\"state: \" + (isValid(datum[\"state\"]) ? datum[\"state\"] : \"\"+datum[\"state\"]) + \"; Percentage dropouts: \" + (format(datum[\"price\"], \"\"))"
+            "signal": "\"state: \" + (isValid(datum[\"state\"]) ? datum[\"state\"] : \"\"+datum[\"state\"]) + \"; Percentage dropouts: \" + (format(datum[\"price\"], \"\")) + \"; price: \" + (format(datum[\"price\"], \"\"))"
           },
           "x": {"scale": "x", "field": "state"},
           "y": {"scale": "y", "field": "price"},
