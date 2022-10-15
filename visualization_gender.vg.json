@@ -1,0 +1,134 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
+  "width": 300,
+  "height": 300,
+  "style": "cell",
+  "data": [
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/shrutimani/Critique/main/gender_toilet.json",
+      "format": {"type": "json"},
+      "transform": [
+        {"type": "filter", "expr": "datum.year == year_select"},
+        {
+          "type": "aggregate",
+          "groupby": ["states", "gender", "girls"],
+          "ops": ["sum"],
+          "fields": ["girls"],
+          "as": ["sum_girls"]
+        },
+        {
+          "type": "stack",
+          "groupby": ["states"],
+          "field": "sum_girls",
+          "sort": {"field": ["gender"], "order": ["ascending"]},
+          "as": ["sum_girls_start", "sum_girls_end"],
+          "offset": "zero"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"sum_girls\"]) && isFinite(+datum[\"sum_girls\"])"
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "year_select",
+      "value": 2013,
+      "bind": {
+        "input": "select",
+        "options": [2013, 2014, 2015],
+        "name": "Select year"
+      }
+    }
+  ],
+  "marks": [
+    {
+      "name": "marks",
+      "type": "rect",
+      "style": ["bar"],
+      "from": {"data": "source_0"},
+      "encode": {
+        "update": {
+          "fill": {"scale": "color", "field": "gender"},
+          "tooltip": {
+            "signal": "{\"Gender\": isValid(datum[\"gender\"]) ? datum[\"gender\"] : \"\"+datum[\"gender\"], \"Percentage of toilets\": isValid(datum[\"girls\"]) ? datum[\"girls\"] : \"\"+datum[\"girls\"]}"
+          },
+          "ariaRoleDescription": {"value": "bar"},
+          "description": {
+            "signal": "\"Number of dropouts: \" + (format(datum[\"sum_girls\"], \"\")) + \"; Top 10 states: \" + (isValid(datum[\"states\"]) ? datum[\"states\"] : \"\"+datum[\"states\"]) + \"; Gender: \" + (isValid(datum[\"gender\"]) ? datum[\"gender\"] : \"\"+datum[\"gender\"]) + \"; Percentage of toilets: \" + (isValid(datum[\"girls\"]) ? datum[\"girls\"] : \"\"+datum[\"girls\"])"
+          },
+          "x": {"scale": "x", "field": "sum_girls_end"},
+          "x2": {"scale": "x", "field": "sum_girls_start"},
+          "y": {"scale": "y", "field": "states"},
+          "height": {"scale": "y", "band": 1}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": {
+        "data": "source_0",
+        "fields": ["sum_girls_start", "sum_girls_end"]
+      },
+      "range": [0, {"signal": "width"}],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "y",
+      "type": "band",
+      "domain": {"data": "source_0", "field": "states", "sort": true},
+      "range": [0, {"signal": "height"}],
+      "paddingInner": 0.1,
+      "paddingOuter": 0.05
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "source_0", "field": "gender", "sort": true},
+      "range": "category"
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "gridScale": "y",
+      "grid": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Number of dropouts",
+      "labelFlush": true,
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "Top 10 states",
+      "zindex": 0
+    }
+  ],
+  "legends": [{"title": "Gender", "fill": "color", "symbolType": "square"}],
+  "config": {}
+}

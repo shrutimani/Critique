@@ -21,3 +21,23 @@ vegaEmbed("#vg4", vg_4).then(function(result) {
 // Access the Vega view instance
 //(https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
+
+var vg_5 = "visualization_zoom_population.vg.json";
+vegaEmbed("#vg5", vg_5).then(function(result) {
+// Access the Vega view instance
+//(https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
+
+var vg_6 = "visualization_gender.vg.json";
+vegaEmbed("#vg6", vg_6).then(function(result) {
+// Access the Vega view instance
+//(https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
+
+var vg_7 = "visualization_categories.vg.json";
+vegaEmbed("#vg7", vg_7).then(function(result) {
+// Access the Vega view instance
+//(https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);

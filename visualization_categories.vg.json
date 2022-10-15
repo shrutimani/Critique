@@ -1,0 +1,102 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "US State - County Analysis",
+  "background": "white",
+  "padding": 5,
+  "width": 330,
+  "height": 300,
+  "style": "cell",
+  "data": [
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/shrutimani/Critique/main/three_categories.csv",
+      "format": {"type": "csv", "delimiter": ","},
+      "transform": [
+        {"type": "filter", "expr": "datum.year == Year_Selection"},
+        {"type": "filter", "expr": "datum.category == Category_Selection"}
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "Year_Selection",
+      "value": "2013",
+      "bind": {
+        "input": "select",
+        "options": [2013, 2014, 2015],
+        "name": "Year Selection"
+      }
+    },
+    {
+      "name": "Category_Selection",
+      "value": "computer",
+      "bind": {
+        "input": "select",
+        "options": ["computer", "electricity", "water"],
+        "name": "Category Selection"
+      }
+    }
+  ],
+  "marks": [
+    {
+      "name": "marks",
+      "type": "line",
+      "style": ["line"],
+      "sort": {"field": "datum[\"state\"]"},
+      "from": {"data": "source_0"},
+      "encode": {
+        "update": {
+          "stroke": {"value": "#4c78a8"},
+          "tooltip": {
+            "signal": "{\"Gender\": isValid(datum[\"state\"]) ? datum[\"state\"] : \"\"+datum[\"state\"], \"Percentage of dropouts\": isValid(datum[\"price\"]) ? datum[\"price\"] : \"\"+datum[\"price\"]}"
+          },
+          "description": {
+            "signal": "\"Top 10 states: \" + (isValid(datum[\"state\"]) ? datum[\"state\"] : \"\"+datum[\"state\"]) + \"; Percentage: \" + (isValid(datum[\"price\"]) ? datum[\"price\"] : \"\"+datum[\"price\"]) + \"; Gender: \" + (isValid(datum[\"state\"]) ? datum[\"state\"] : \"\"+datum[\"state\"]) + \"; Percentage of dropouts: \" + (isValid(datum[\"price\"]) ? datum[\"price\"] : \"\"+datum[\"price\"])"
+          },
+          "x": {"scale": "x", "field": "state"},
+          "y": {"scale": "y", "field": "price"}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "point",
+      "domain": {"data": "source_0", "field": "state", "sort": true},
+      "range": [0, {"signal": "width"}],
+      "padding": 0.5
+    },
+    {
+      "name": "y",
+      "type": "point",
+      "domain": {
+        "data": "source_0",
+        "field": "price",
+        "sort": {"order": "descending", "field": "key"}
+      },
+      "range": [0, {"signal": "height"}],
+      "padding": 0.5
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Top 10 states",
+      "labelAlign": "right",
+      "labelAngle": 270,
+      "labelBaseline": "middle",
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "Percentage",
+      "zindex": 0
+    }
+  ],
+  "config": {}
+}
