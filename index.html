@@ -4,41 +4,88 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 <script src="vega_lite_vs.js"></script>
 <link rel="stylesheet" href="style.css">
-<title>Critique</title>
+<title>Data Vis 2</title>
 </head>
 <body>
+<div class = "everything">
 <h1>Education system in India</h1>
-<div class="anything">
-    <h2>About India</h2>
-    <p>India, country that occupies the greater part of South Asia. Its capital is New Delhi, 
-        built in the 20th century just south of the historic hub of Old Delhi to serve as India's administrative centre. 
-        Its government is a constitutional republic that represents a highly diverse population 
-        consisting of thousands of ethnic groups and likely hundreds of languages. With roughly one-sixth of the world's total population, 
-        India is the second most populous country, after China.</p>
-<h2> illiteracy in India </h2>
-    <p>In India, illiteracy is basically categorized as wide gaps between rural and urban populations. 
-        The majority of the people are illiterate especially in rural areas, where people are unaware 
-        about the ill effects of being illiterate and moreover facilities are also not ample.</p>
-   
-    <h2>Dropout rates in India</h2>
+<div class="pure-g">
+    <div class="pure-u-1-2"> 
+        <h2>About India</h2>
+        <pre>
+<br>India, country that occupies the greater part of South Asia. 
+Its capital is New Delhi, built in the 20th century 
+just south of the historic hub of Old Delhi to 
+serve as India's administrative centre. 
 
-    <div id="dropout_rates">
+<br>Its government is a constitutional republic that represents 
+a highly diverse population consisting of thousands of 
+ethnic groups and likely hundreds of languages. 
+With roughly one-sixth of the world's total population, 
+India is the second most populous country, after China.
+        </pre>
     </div>
-    <h2>Number of dropouts for primary and secondary students over the years</h2>
-    <p>Use the slider below to see the change of the number of dropouts over time.</p>
-    <div id="scatter">
+    <div class="pure-u-1-2"> 
+        <div id="population_zoom">
+        </div>
     </div>
-    <h2>Percentage of schools with no computers for multiple states over the course of three years</h2>
-    <div id="population_zoom">
+</div>
+ 
+<h2> Illiteracy in India </h2>
+<pre>In India, illiteracy is basically categorized as wide gaps between 
+    rural and urban populations. The majority of the people 
+    are illiterate especially in rural areas, where people are unaware 
+    about the ill effects of being illiterate and moreover facilities 
+    are also not ample.</pre>
+
+<h2>Dropout rates in India</h2> 
+<div id="dropout_rates">
+</div>
+
+<h2>Number of dropouts for primary and secondary students over the years</h2>
+<pre>
+    <br>It has been revealed from the report that 
+    there are 19 states/union territories where the dropout rate 
+    at the secondary level (Class IX and X) is much higher 
+    than the All India rate (17.3%). 
+    
+    <br>The dropout rate is more than 25% in Tripura, Sikkim, 
+    Nagaland, Meghalaya, Madhya Pradesh, Assam, and Arunachal Pradesh. 
+    In fact, four states have registered a dropout rate of 
+    more than 30%.</pre>
+<pre>Use the slider below to see the change of the number of dropouts over time.</pre>
+<div id="scatter">
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <h2>Percentage of schools with no resources.</h2>
+        <div id="categories">
+        </div>
+        <pre>
+            <br>One of the major reasons why the dropout rate 
+            is higher in economically backward regions is the lack of resources. 
+            Lack of financial stability forces people to look at education 
+            as luxury and not necessity. 
+
+            <br>Inadequate funds, unskilled teachers, inadequate infrastructure, etc. contribute to reasons 
+            for students leaving school. 
+            This includes lack of facilities like computers, and basic amenities 
+            like water and elctricity</pre>
     </div>
-    <div id="gender">
+    <div class="pure-u-1-2">
+        <h2>Ratio of boys and girls toilet</h2>
+        <div id="gender">
+        </div>
     </div>
-    <div id="categories">
-    </div>
+</div>
+</div>
+</div>
 </body>
 </html>

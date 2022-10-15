@@ -28,7 +28,7 @@ vegaEmbed("#gender", gender, opt).then(function(result) {
 }).catch(console.error);
 
 
-var categories = "visualization_categories.vg.json";
+var categories = "visualization_category_new.vg.json";
 vegaEmbed("#categories", categories, opt).then(function(result) {
 // Access the Vega view instance
 //(https://vega.github.io/vega/docs/api/view/) as result.view

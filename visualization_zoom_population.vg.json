@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "background": "#fff",
+  "background": null,
   "padding": 5,
   "width": 500,
   "height": 300,
@@ -46,7 +46,7 @@
   "signals": [
     {
       "name": "zoom_level",
-      "value": 500,
+      "value":1100,
       "bind": {
         "input": "range",
         "min": 500,
@@ -57,7 +57,7 @@
     },
     {
       "name": "center_to",
-      "value": [77.1, 28.7],
+      "value": [85.13, 25.59],
       "bind": {
         "input": "select",
         "options": [

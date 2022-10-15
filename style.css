@@ -1,10 +1,16 @@
 body {
-    background-color: #F9F3A7;
+    background-color:darkolivegreen;
+    text-align: center;
+
 }
 h1,h2 {
     text-align: center;
+    margin-top: 0px;
 }
-.anything {
-    margin:0 auto; 
-    text-align: center;
+
+
+.everything{
+    width: 1000px;
+    background-color:lightgreen;
+    margin: auto;
 }

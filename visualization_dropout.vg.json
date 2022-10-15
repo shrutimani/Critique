@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "background": "white",
+  "background": null,
   "padding": 5,
   "width": 500,
-  "height": 500,
+  "height": 300,
   "style": "cell",
   "data": [
     {
@@ -121,6 +121,7 @@
       "title": "Size of dropouts",
       "size": "size",
       "symbolType": "circle",
+      "orient":"left",
       "encode": {
         "symbols": {
           "update": {
