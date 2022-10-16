@@ -3,7 +3,7 @@
   "description": "An interactive scatter plot of the number of dropouts for primary and secondary students over the years.",
   "background": null,
   "padding": 5,
-  "width": 500,
+  "width": 600,
   "height": 300,
   "style": "cell",
   "data": [
