@@ -39,7 +39,7 @@
       "encode": {
         "update": {
           "opacity": {"value": 0.8},
-          "stroke": {"value": "white"},
+          "stroke": {"value": null},
           "strokeWidth": {"value": 1},
           "fill": {"scale": "color", "field": "States"},
           "tooltip": {
@@ -90,7 +90,7 @@
     {
       "scale": "x",
       "orient": "bottom",
-      "grid": false,
+      "grid": true,
       "title": "States",
       "labelAlign": "right",
       "labelAngle": 270,
@@ -98,17 +98,19 @@
       "zindex": 0,
       "labelColor":"white",
       "titleColor":"white",
-      "gridColor":"white"
+      "gridColor":"white",
+      "gridOpacity":{"value": 0.4}
     },
     {
       "scale": "y",
       "orient": "left",
-      "grid": false,
+      "grid": true,
       "title": "Number of dropouts",
       "zindex": 0,
       "labelColor":"white",
       "titleColor":"white",
-      "gridColor":"white"
+      "gridColor":"white",
+      "gridOpacity":{"value": 0.4}
     }
   ],
   "legends": [
@@ -120,7 +122,7 @@
       "labelColor":"white",
       "encode": {
         "symbols": {
-          "update": {"stroke": {"value": "white"}, "opacity": {"value": 0.8}}
+          "update": {"stroke": {"value": null}, "opacity": {"value": 0.8}}
         }
       }
     },
@@ -136,7 +138,7 @@
         "symbols": {
           "update": {
             "fill": {"value": "white"},
-            "stroke": {"value": "white"},
+            "stroke": {"value": null},
             "fillOpacity": {"value": 0.8},
             "opacity": {"value": 0.8}
           }

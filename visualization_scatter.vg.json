@@ -233,7 +233,7 @@
       "from": {"data": "data_0"},
       "encode": {
         "update": {
-          "opacity": {"value": 0.06},
+          "opacity": {"value": 0.3},
           "fontSize": {"value": 100},
           "fill": {"value": "white"},
           "description": {
