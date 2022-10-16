@@ -1,0 +1,207 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": null,
+  "padding": 5,
+  "width": 600,
+  "style": "cell",
+  "data": [
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/shrutimani/Data-Vis-2/main/gross_enrol.csv",
+      "format": {
+        "type": "csv",
+        "parse": {"states": "string", "year": "number"},
+        "delimiter": ","
+      },
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "indexof([\"Andhra Pradesh\",\"Arunachal Pradesh\",\"Chhattisgarh\",\"Gujarat\",\"Haryana\",\"Jharkhand\",\"Madhya Pradesh\",\"Maharashtra\",\"Manipur\",\"Punjab\",\"Rajasthan\",\"Sikkim\",\"Tamil Nadu\",\"Uttarakhand\",\"West Bengal\"], datum[\"states\"]) !== -1"
+        },
+        {"type": "filter", "expr": "datum.year == year_select"},
+        {
+          "type": "filter",
+          "expr": "indexof([2013,2014,2015], datum[\"year\"]) !== -1"
+        }
+      ]
+    },
+    {
+      "name": "data_0",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"total\"]) && isFinite(+datum[\"total\"])"
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {"name": "y_step", "value": 20},
+    {
+      "name": "height",
+      "update": "bandspace(domain('y').length, 1, 0.5) * y_step"
+    },
+    {
+      "name": "year_select",
+      "value": 2013,
+      "bind": {
+        "input": "select",
+        "options": [2013, 2014, 2015],
+        "name": "Select year   "
+      }
+    }
+  ],
+  "marks": [
+    {
+      "name": "layer_0_pathgroup",
+      "type": "group",
+      "from": {
+        "facet": {
+          "name": "faceted_path_layer_0_main",
+          "data": "source_0",
+          "groupby": ["states"]
+        }
+      },
+      "encode": {
+        "update": {
+          "width": {"field": {"group": "width"}},
+          "height": {"field": {"group": "height"}}
+        }
+      },
+      "marks": [
+        {
+          "name": "layer_0_marks",
+          "type": "line",
+          "style": ["line"],
+          "sort": {"field": "datum[\"states\"]"},
+          "from": {"data": "faceted_path_layer_0_main"},
+          "encode": {
+            "update": {
+              "stroke": {"value": "#000000"},
+              "description": {
+                "signal": "\"Number of gross enrolments: \" + (format(datum[\"total\"], \"\")) + \"; States: \" + (isValid(datum[\"states\"]) ? datum[\"states\"] : \"\"+datum[\"states\"]) + \"; states: \" + (isValid(datum[\"states\"]) ? datum[\"states\"] : \"\"+datum[\"states\"])"
+              },
+              "x": {"scale": "x", "field": "total"},
+              "y": {"scale": "y", "field": "states"},
+              "strokeWidth": {"value": 3},
+              "defined": {
+                "signal": "isValid(datum[\"total\"]) && isFinite(+datum[\"total\"])"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "layer_1_marks",
+      "type": "symbol",
+      "style": ["point"],
+      "from": {"data": "data_0"},
+      "encode": {
+        "update": {
+          "opacity": {"value": 1},
+          "fill": {"scale": "color", "field": "year"},
+          "tooltip": {
+            "signal": "{\"Percentage dropout\": isValid(datum[\"total\"]) ? datum[\"total\"] : \"\"+datum[\"total\"], \"Year\": format(datum[\"year\"], \"\"), \"Gender\": isValid(datum[\"gender\"]) ? datum[\"gender\"] : \"\"+datum[\"gender\"]}"
+          },
+          "ariaRoleDescription": {"value": "point"},
+          "description": {
+            "signal": "\"Number of gross enrolments: \" + (format(datum[\"total\"], \"\")) + \"; States: \" + (isValid(datum[\"states\"]) ? datum[\"states\"] : \"\"+datum[\"states\"]) + \"; Year: \" + (isValid(datum[\"year\"]) ? datum[\"year\"] : \"\"+datum[\"year\"]) + \"; Percentage dropout: \" + (isValid(datum[\"total\"]) ? datum[\"total\"] : \"\"+datum[\"total\"]) + \"; Gender: \" + (isValid(datum[\"gender\"]) ? datum[\"gender\"] : \"\"+datum[\"gender\"])"
+          },
+          "x": {"scale": "x", "field": "total"},
+          "y": {"scale": "y", "field": "states"},
+          "size": {"value": 100}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": [75, 120],
+      "range": [0, {"signal": "width"}],
+      "zero": false
+    },
+    {
+      "name": "y",
+      "type": "point",
+      "domain": {
+        "fields": [
+          {"data": "source_0", "field": "states"},
+          {"data": "data_0", "field": "states"}
+        ],
+        "sort": true
+      },
+      "range": {"step": {"signal": "y_step"}},
+      "padding": 0.5
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": [2013, 2014, 2015],
+      "range": ["#4572a7", "#14C4CC", "#ef9f21"],
+      "interpolate": "hcl"
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "gridScale": "y",
+      "grid": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white",
+      "gridOpacity":{"value": 0.4}
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Number of gross enrolments",
+      "labelFlush": true,
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white",
+      "gridOpacity":{"value": 0.4}
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "States",
+      "domain": false,
+      "offset": 8,
+      "ticks": false,
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white",
+      "gridOpacity":{"value": 0.4}
+    }
+  ],
+  "legends": [
+    {
+      "title": "Year",
+      "fill": "color",
+      "labelColor":"white",
+      "titleColor":"white",
+      "symbolType": "circle",
+      "encode": {"symbols": {"update": {"opacity": {"value": 1}}}}
+    }
+  ],
+  "config": {}
+}

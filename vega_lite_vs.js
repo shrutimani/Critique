@@ -34,4 +34,10 @@ vegaEmbed("#categories", categories, opt).then(function(result) {
 //(https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
+var gross = "gross_visualization.vg.json";
+vegaEmbed("#gross", gross, opt).then(function(result) {
+// Access the Vega view instance
+//(https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
 
