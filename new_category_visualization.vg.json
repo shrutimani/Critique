@@ -3,7 +3,7 @@
   "background": null,
   "padding": 5,
   "width": 330,
-  "height": 300,
+  "height": 297,
   "style": "cell",
   "data": [
     {
@@ -98,7 +98,7 @@
           "text": {"value": "MAX VALUE  "},
           "dx": {"value": -2},
           "dy": {"value": -125},
-          "fill": {"value": "darkblue"},
+          "fill": {"value": "white"},
           "x": {"signal": "width", "mult": 0.5},
           "y": {"signal": "height", "mult": 0.5}
         }
@@ -136,6 +136,7 @@
       "scale": "x",
       "orient": "bottom",
       "gridScale": "y",
+      "gridOpacity":0.6,
       "grid": true,
       "domain": false,
       "labels": false,
@@ -143,12 +144,16 @@
       "maxExtent": 0,
       "minExtent": 0,
       "ticks": false,
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     },
     {
       "scale": "y",
       "orient": "left",
       "gridScale": "x",
+      "gridOpacity":0.6,
       "grid": true,
       "domain": false,
       "labels": false,
@@ -156,7 +161,10 @@
       "maxExtent": 0,
       "minExtent": 0,
       "ticks": false,
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     },
     {
       "scale": "x",
@@ -166,19 +174,25 @@
       "labelAlign": "right",
       "labelAngle": 270,
       "labelBaseline": "middle",
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     },
     {
       "scale": "y",
       "orient": "left",
       "grid": false,
       "title": "price",
-      "zindex": 0
+      "zindex": 0,
+      "labelColor":"white",
+      "titleColor":"white",
+      "gridColor":"white"
     }
   ],
   "legends": [{"stroke": "color", "title": "category"}],
   "config": {
-    "background": "#fff",
+    "background": null,
     "arc": {"fill": "#4572a7"},
     "area": {"fill": "#4572a7"},
     "line": {"stroke": "#4572a7", "strokeWidth": 2},
@@ -189,7 +203,7 @@
     "axis": {
       "bandPosition": 0.5,
       "grid": true,
-      "gridColor": "#000000",
+      "gridColor": "white",
       "gridOpacity": 1,
       "gridWidth": 0.5,
       "labelPadding": 10,
@@ -200,6 +214,8 @@
     "legend": {
       "labelBaseline": "middle",
       "labelFontSize": 11,
+      "labelColor":"white",
+      "titleColor":"white",
       "symbolSize": 50,
       "symbolType": "square"
     },

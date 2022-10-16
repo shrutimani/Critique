@@ -289,7 +289,7 @@
               },
               "x": {"scale": "x", "field": "Primary"},
               "y": {"scale": "y", "field": "Secondary"},
-              "strokeWidth": {"value": 4},
+              "strokeWidth": {"value": 2},
               "defined": {
                 "signal": "isValid(datum[\"Primary\"]) && isFinite(+datum[\"Primary\"]) && isValid(datum[\"Secondary\"]) && isFinite(+datum[\"Secondary\"])"
               }
@@ -352,7 +352,7 @@
       "encode": {
         "update": {
           "fontSize": {"value": 12},
-          "fill": {"value": "red"},
+          "fill": {"value": "white"},
           "description": {
             "signal": "\"Primary: \" + (format(datum[\"Primary\"], \"\")) + \"; Secondary: \" + (format(datum[\"Secondary\"], \"\")) + \"; year: \" + (isValid(datum[\"year\"]) ? datum[\"year\"] : \"\"+datum[\"year\"])"
           },
@@ -421,6 +421,7 @@
       "orient": "bottom",
       "tickCount": 8,
       "gridScale": "y",
+      "gridOpacity":0.5,
       "grid": true,
       "domain": false,
       "labels": false,
@@ -438,6 +439,7 @@
       "orient": "left",
       "tickCount": 8,
       "gridScale": "x",
+      "gridOpacity":0.5,
       "grid": true,
       "domain": false,
       "labels": false,

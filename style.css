@@ -8,6 +8,7 @@ body {
 h1,h2 {
     text-align: center;
     margin-top: 0px;
+    margin-bottom: 0px;
     color: white;
 }
 
@@ -16,8 +17,8 @@ h1 {
     font-family: 'Mukta', sans-serif;
     background-color: #262626;
     font-size: 60px;
-    padding-top: 1rem;
-    padding-bottom: 2rem
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
 }
 
 h2{
@@ -31,14 +32,13 @@ pre{
     font-family: 'Mukta', sans-serif;
     font-weight: lighter;
     font-size: 20px;
-}
-
-
-
-pre {
     color: white;
     text-align: center;
+    line-height: 1.4;
+    margin:0
 }
+
+
 
 br{
     color: white;
@@ -55,17 +55,45 @@ br{
     color: white;
 }
 
+.vega-bind {
+    margin-bottom: 1rem;
+}
 h2 {
     background-color: black;
     padding-top: 1rem;
     padding-bottom: 1rem
 }
 
-pre .box{
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    background-color: aquamarine;
+#box{
+    border: black;
+    border-style: outset;
+    border-width: 0.3rem;
+    padding: 1.1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    background-color: #60605c;
+}
+
+#bold-text {
+    font-weight: bold;
+}
+#population_zoom{
+    padding: 1rem;
+}
+
+#dropout_rates {
+    padding: 1rem;
+}
+
+#scatter{
+    padding: 1rem;
+}
+
+#gender{
+    padding: 1rem;
+}
+
+#categories
+{
+    padding: 1rem;
 }
