@@ -1,7 +1,7 @@
 
 
 body {
-    background-color:gray;
+    background-color:black;
     text-align: center;
 
 }
@@ -21,10 +21,11 @@ br{
 
 .everything{
     width: 1100px;
-    background-color:black;
+    background-color:#262626;
     margin: auto;
 }
 
 .vega-bindings{
     color: white;
 }
+

@@ -23,7 +23,7 @@
       "bind": {
         "input": "select",
         "options": [2013, 2014, 2015],
-        "name": "Year Selection"
+        "name": "Year Selection   "
       }
     },
     {
@@ -32,7 +32,7 @@
       "bind": {
         "input": "select",
         "options": ["computer", "electricity", "water"],
-        "name": "Category Selection"
+        "name": "Category Selection   "
       }
     }
   ],

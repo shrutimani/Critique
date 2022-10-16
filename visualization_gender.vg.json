@@ -41,7 +41,7 @@
       "bind": {
         "input": "select",
         "options": [2013, 2014, 2015],
-        "name": "Select year"
+        "name": "Select year   "
       }
     }
   ],
@@ -112,7 +112,8 @@
       "zindex": 0,
       "labelColor":"white",
       "titleColor":"white",
-      "gridColor":"white"
+      "gridColor":"white",
+      "gridOpacity":{"value":"0.6"}
     },
     {
       "scale": "x",
