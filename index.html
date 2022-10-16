@@ -8,6 +8,18 @@
 <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet">
 <script src="vega_lite_vs.js"></script>
 <link rel="stylesheet" href="style.css">
 <title>Data Vis 2</title>
@@ -15,9 +27,9 @@
 <body>
 <div class = "everything">
 <h1>Education system in India</h1>
+<h2>About India</h2>
 <div class="pure-g">
     <div class="pure-u-1-2"> 
-        <h2>About India</h2>
         <pre>
 <br>India, country that occupies the greater part of South Asia. 
 Its capital is New Delhi, built in the 20th century 
@@ -49,6 +61,10 @@ India is the second most populous country, after China.
 </div>
 
 <h2>Number of dropouts for primary and secondary students over the years</h2>
+
+<div id="scatter">
+</div>
+
 <pre>
     <br>It has been revealed from the report that 
     there are 19 states/union territories where the dropout rate 
@@ -59,47 +75,56 @@ India is the second most populous country, after China.
     Nagaland, Meghalaya, Madhya Pradesh, Assam, and Arunachal Pradesh. 
     In fact, four states have registered a dropout rate of 
     more than 30%.</pre>
-<pre>Use the slider below to see the change of the number of dropouts over time.</pre>
-<div id="scatter">
-</div>
+
+
 
 <div class="pure-g">
     <div class="pure-u-1-2">
         <h2>Percentage of schools with no resources.</h2>
-        <pre>Hover over the lines to see more details.</pre>
         <div id="categories">
         </div>
         <pre id = "categories_text">
-            <br>One of the major reasons why the dropout rate 
-            is higher in economically backward regions is the lack of resources. 
-            Lack of financial stability forces people to look at education 
-            as luxury and not necessity. 
+            <pre id = "box">Hover over the lines</pre> 
 
-            <br>Inadequate funds, unskilled teachers, inadequate infrastructure, etc. contribute to reasons 
-            for students leaving school. 
-            This includes lack of facilities like computers, and basic amenities 
-            like water and elctricity</pre>
+            <br>One of the major reasons why the dropout rate 
+            is higher in economically backward regions is the 
+            lack of resources. Lack of financial stability 
+            forces people to look at education as luxury and 
+            not necessity. 
+
+            <br>Inadequate funds, unskilled teachers, 
+            inadequate infrastructure, etc. contribute to 
+            reasons for students leaving school. 
+            This includes lack of facilities like computers, 
+            and basic amenities like water and elctricity</pre>
 
 
     </div>
     <div class="pure-u-1-2">
         <h2>Ratio of boys and girls toilet</h2>
-        <pre>Hover over the bars to see more details.</pre>
+        
         <div id="gender">
         </div>
         <pre id = "gender_text">
-            <br>The lack of adequate toilets and proper hygiene in schools 
-            are major barriers to school attendance and education of children, 
-            specifically for girls. 
+            <pre id = "box">Hover over the bars</pre> 
+
+            <br>The lack of adequate toilets and proper hygiene
+             in schools are major barriers to school 
+             attendance and education of children, 
+             specifically for girls. 
             
-            <br>Children spend a significant part of their day at school 
-            and the quality of water, sanitation, hygiene (WASH) services 
-            at the educational institution can impact their learning and health.
+            <br>Children spend a significant part of their day 
+            at school and the quality of water, 
+            sanitation, hygiene (WASH) services at 
+            the educational institution can impact 
+            their learning and health.
             
-            <br>Availability of quality WASH services at school is also critical 
-            for the health and dignity of girls. 
-            School dropout rate, especially among girls, is directly linked to 
-            toilet and hygiene facilities at schools.
+            <br>Availability of quality WASH services at school 
+            is also critical for the health and 
+            dignity of girls. School dropout rate, 
+            especially among girls, is  directly 
+            linked to toilet and hygiene facilities 
+            at schools.
         </pre>
     </div>
 </div>

@@ -68,7 +68,7 @@
     {
       "name": "y",
       "type": "point",
-      "domain": {"data": "source_0", "field": "total", "sort": true},
+      "domain": {"data": "source_0", "field": "total", "sort":true},
       "range": [0, {"signal": "height"}],
       "padding": 0.5
     },

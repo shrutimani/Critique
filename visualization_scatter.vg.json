@@ -131,7 +131,7 @@
       "name": "year_year",
       "init": "2013",
       "bind": {
-        "name": "Year",
+        "name": "Year   ",
         "input": "range",
         "min": 2013,
         "max": 2015,
