@@ -91,7 +91,7 @@
       "scale": "x",
       "orient": "bottom",
       "grid": true,
-      "title": "States",
+      "title": "Top 15 States",
       "labelAlign": "right",
       "labelAngle": 270,
       "labelBaseline": "middle",
@@ -117,7 +117,7 @@
     {
       "fill": "color",
       "symbolType": "circle",
-      "title": "States",
+      "title": "Top 15 States",
       "titleColor":"white",
       "labelColor":"white",
       "encode": {
@@ -128,7 +128,7 @@
     },
     {
       "clipHeight": 50,
-      "title": "Size of dropouts",
+      "title": "Size of dropouts (in thousands) ",
       "titleColor":"white",
       "labelColor":"white",
       "size": "size",

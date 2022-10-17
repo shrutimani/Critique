@@ -182,7 +182,7 @@
       "scale": "y",
       "orient": "left",
       "grid": false,
-      "title": "States",
+      "title": "Top 15 States",
       "domain": false,
       "offset": 8,
       "ticks": false,
